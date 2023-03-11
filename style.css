@@ -232,7 +232,7 @@ nav {
 
     .heading-wrapper {
         margin-bottom: -5rem;
-        height: 30vh;
+        height: 25vh;
     }
 
     .heading-title h1 {
@@ -258,9 +258,9 @@ nav {
     }
 }
 
-@media screen and (min-width:359px) and (max-width:768px ) {
+@media screen and (min-width:385px) and (max-width:768px ) {
     .heading-wrapper {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 }
 
