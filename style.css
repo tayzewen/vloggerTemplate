@@ -4,6 +4,27 @@
     box-sizing: border-box;
 }
 
+/* Code to fix "overflow: hidden" on mobile */
+
+html {
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+}
+  
+body {
+    margin: 0;
+    width: 100vw; 
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* End code for overflow:hidden */
+
+
+/* No NAV transition on page load */
 .no-transition * {
     -webkit-transition: none !important;
     -moz-transition: none !important;
@@ -62,10 +83,6 @@ nav {
 
 
 @media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
-
     /* NAVIGATION -START- */
 
     .nav-links {
