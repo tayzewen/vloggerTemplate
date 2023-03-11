@@ -5,7 +5,8 @@
 }
 
 :root {
-    --heading-font-color: #F8E8E3;
+    --heading-font-color: #F6EFEC;
+    --nav-font-links: #38182F;
 }
 
 /* Code to fix "overflow: hidden" on mobile */
@@ -44,26 +45,36 @@ nav {
     justify-content: space-between;
     align-items: center;
     min-height: 8vh;
-    margin: 0 2rem;
+    margin: 0 6rem;
+    font-size: 1.2rem;
 }
 
 .logo {
-    color: #50042e;
+    color: var(--nav-font-links);
     font-family: "liebelotte", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .nav-links {
     display: flex;
     justify-content: space-around;
     width: 50%;
+    font-family: "interstate-condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .nav-links a {
-    color: #50042e;
+    color: var(--nav-font-links);
     text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--heading-font-color);
+    transition: 0.3s;
+    
 }
 
 .nav-links li {
@@ -79,7 +90,7 @@ nav {
     width: 18px;
     height: 2px;
     margin: 4px;
-    background-color: #50042e;
+    background-color: var(--nav-font-links);
     transition: all 0.3s ease;
 }
 
@@ -88,6 +99,10 @@ nav {
 
 @media screen and (max-width: 768px) {
     /* NAVIGATION -START- */
+
+    nav {
+        margin: 0 1rem;
+    }
 
     .nav-links {
         position: absolute;
@@ -101,7 +116,7 @@ nav {
         transform: translateX(100%);
         transition: .3s ease-in;
         z-index: 1;
-        background-color: white;
+        background-color: var(--heading-font-color);
     }
 
     .nav-links li {
@@ -110,7 +125,7 @@ nav {
 
     .burger {
         display: block;
-        border: 1px solid #50042e;
+        border: 1px solid var(--nav-font-links);
         border-radius: 100px;
         padding: 3px;
     }
@@ -121,6 +136,7 @@ nav {
 
 .nav-active {
     transform: translateX(0%);
+    box-shadow: 0px 3px 8px #92746A, 0px -3px 8px #92746A;
 }
 
 @keyframes navLinkFade {
@@ -151,7 +167,8 @@ nav {
 /* HEADER -START- */
 
 .background-overlay {
-    background: #C39B8D;
+    background:url(assets/images/dustyPink-bg.png)no-repeat center;
+    background-size: cover;
 }
 
 .heading-wrapper {
@@ -250,6 +267,8 @@ nav {
         width: 30%;
         height: auto;
     }
+
+
 }
 
 @media screen and (max-width: 290px) {
@@ -264,28 +283,37 @@ nav {
     }
 }
 
+/* HEADER -END- */
+
 .content-background-overlay {
-    background-color:aqua;
+    background: url(assets/images/palePink-bg.png) center no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .content-elements-wrapper {
-    width: 85%;
-    margin-top: -3rem;
+    width: 75%;
+    margin-top: -2rem;
 }
 
 .test-box {
-    position: relative;
     text-align: center;
     background-color: white;
     margin-bottom: 1rem;
+    padding: .5rem;
+    border-radius: 1.5vh;
+    box-shadow: 0px 5px 50px #92746A;
 }
 
 .about {
     padding: 2rem 0;
 }
 
+@media screen and (max-width: 768px) {
+    .content-elements-wrapper {
+        width: 90%;
+    }
+}
 
-/* HEADER -END- */
