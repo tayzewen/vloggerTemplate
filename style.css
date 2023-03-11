@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --heading-font-color: #F8E8E3;
+}
+
 /* Code to fix "overflow: hidden" on mobile */
 
 html {
@@ -150,14 +154,34 @@ nav {
     background: #C39B8D;
 }
 
+.heading-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 40vh;
+    margin-bottom: -15rem;
+}
+
+.heading-title, .subheading-title {
+    width: 35%;
+}
+
+.subheading-title {
+    display: flex;
+    align-items: flex-end;
+}
+
 .heading-title h1 {
     padding: 7rem 2rem 3rem;
-    color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-family: "basco-std", serif;
+    color: var(--heading-font-color);
 }
 
 .subheading-title h2 {
     padding: 1rem 2rem 2rem 2rem;
+    font-family: "basco-std", serif;
+    text-align: right;
+    color: var(--heading-font-color);
 }
 
 .headshot {
@@ -171,26 +195,53 @@ nav {
     height: auto;
 }
 
-.content-background-overlay {
-    background-color:aqua;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.test-box {
-    position: relative;
-    text-align: center;
-    background-color: white;
-    width: 85%;
-    margin-top: -3rem;
-    margin-bottom: 1rem;
-}
-
 @media screen and (max-width: 768px) {
     .headshot img {
         width: 75%;
         height: auto;
+    }
+
+    .heading-wrapper {
+        margin-bottom: 7rem;
+        height: 30vh;
+        flex-wrap: wrap;
+    }
+
+    .heading-wrapper h1 {
+        padding: 4rem 1rem 1rem .5rem;
+    }
+
+    .subheading-title, .heading-title {
+        width: 100%;
+    }
+
+    .subheading-title h2 {
+        padding: 2rem .5rem 1rem 1rem;
+        align-items: flex-end;
+    }
+
+    .subheading-title {
+        display: block;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width: 1199px) {
+    .subheading-title, .heading-title {
+        width: 40%;
+    }
+
+    .heading-wrapper {
+        margin-bottom: -5rem;
+        height: 30vh;
+    }
+
+    .heading-title h1 {
+        padding: 3rem 1rem;
+    }
+
+
+    .subheading-title h2 {
+        padding-right: .5rem;
     }
 }
 
@@ -200,5 +251,29 @@ nav {
         height: auto;
     }
 }
+
+.content-background-overlay {
+    background-color:aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-elements-wrapper {
+    width: 85%;
+    margin-top: -3rem;
+}
+
+.test-box {
+    position: relative;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+.about {
+    padding: 2rem 0;
+}
+
 
 /* HEADER -END- */
