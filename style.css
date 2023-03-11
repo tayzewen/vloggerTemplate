@@ -252,6 +252,18 @@ nav {
     }
 }
 
+@media screen and (max-width: 290px) {
+    .heading-wrapper {
+        margin-bottom: 10rem;
+    }
+}
+
+@media screen and (min-width:359px) and (max-width:768px ) {
+    .heading-wrapper {
+        margin-bottom: 1rem;
+    }
+}
+
 .content-background-overlay {
     background-color:aqua;
     display: flex;
